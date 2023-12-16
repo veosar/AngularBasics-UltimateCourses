@@ -10,11 +10,9 @@ import { Donut } from '../../models/donut.model';
       <donut-card [donut]="donuts[2]"></donut-card>  
     </div>
   `,
-  styles: [
-  ]
+  styles: [  ]
 })
 export class DonutListComponent {
-  donut!: Donut;
   donuts!: Donut[];
 
   constructor() {}
@@ -25,7 +23,7 @@ export class DonutListComponent {
         id: 'y8z0As',
         name: 'Just chocolate',
         icon: 'just-chocolate',
-        price: 119,
+        price: 119,        
         description: 'For the pure chocoholic.'
       },
       {
@@ -33,6 +31,7 @@ export class DonutListComponent {
         name: 'Glazed Fudge',
         icon: 'glazed-fudge',
         price: 129,
+        promo: true,
         description: 'Sticky perfection.'
       },
       {
@@ -43,7 +42,5 @@ export class DonutListComponent {
         description: 'Chocolate drizzled with caramel.'
       }
     ];
-
-    this.donut = this.donuts[2];
   }
 }
