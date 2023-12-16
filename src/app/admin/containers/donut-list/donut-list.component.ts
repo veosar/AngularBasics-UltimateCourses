@@ -5,9 +5,16 @@ import { Donut } from '../../models/donut.model';
   selector: 'donut-list',
   template: `
     <div>
-      <donut-card [donut]="donuts[0]"></donut-card>      
-      <donut-card [donut]="donuts[1]"></donut-card>  
-      <donut-card [donut]="donuts[2]"></donut-card>  
+      <ng-container *ngIf="donuts.length; else nothing">
+
+      <donut-card *ngFor="let donut of donuts"
+      [donut]="donut">
+    </donut-card>  
+      </ng-container>
+      
+      <ng-template #nothing>
+        <p>No Donuts here...</p>
+      </ng-template>
     </div>
   `,
   styles: [  ]
