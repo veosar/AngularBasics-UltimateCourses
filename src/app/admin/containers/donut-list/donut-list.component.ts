@@ -7,7 +7,7 @@ import { Donut } from '../../models/donut.model';
     <div>
       <ng-container *ngIf="donuts.length; else nothing">
 
-      <donut-card *ngFor="let donut of donuts"
+      <donut-card *ngFor="let donut of donuts; index as i; trackBy: trackById"
       [donut]="donut">
     </donut-card>  
       </ng-container>
@@ -30,7 +30,8 @@ export class DonutListComponent {
         id: 'y8z0As',
         name: 'Just chocolate',
         icon: 'just-chocolate',
-        price: 119,        
+        price: 119,     
+        promo: 'limited', 
         description: 'For the pure chocoholic.'
       },
       {
@@ -38,7 +39,7 @@ export class DonutListComponent {
         name: 'Glazed Fudge',
         icon: 'glazed-fudge',
         price: 129,
-        promo: true,
+        promo: 'new',
         description: 'Sticky perfection.'
       },
       {
@@ -47,7 +48,25 @@ export class DonutListComponent {
         icon: 'caramel-swirl',
         price: 129,
         description: 'Chocolate drizzled with caramel.'
+      },
+      {
+        id: '8amkZ9',
+        name: 'Sour Supreme',
+        icon: 'sour-supreme',
+        price: 139,
+        description: 'For the sour advocate.'
+      },
+      {
+        id: 'l3M0nz',
+        name: 'Zesty Lemon',
+        icon: 'zesty-lemon',
+        price: 129,
+        description: 'Delicious lucious lemon.'
       }
     ];
+  }
+
+  trackById(index: number, value: Donut) {
+    return value.id;
   }
 }
