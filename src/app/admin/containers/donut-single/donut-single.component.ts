@@ -39,7 +39,7 @@ export class DonutSingleComponent implements OnInit {
   onCreate(donut: Donut) {
     this.donutService
       .create(donut)
-      .subscribe((donut) => this.router.navigate(['admin', 'donuts', donut.id]));
+      .subscribe(() => this.router.navigate(['admin']));
   }
 
   onUpdate(donut: Donut) {

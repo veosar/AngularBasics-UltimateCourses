@@ -29,6 +29,22 @@
       "icon": "zesty-lemon",
       "price": 129,
       "description": "Delicious lucious lemon."
+    },
+    {
+      "name": "Testing",
+      "icon": "just-chocolate",
+      "price": 129,
+      "promo": "limited",
+      "description": "Testing...",
+      "id": "n0pfdyD"
+    },
+    {
+      "name": "Testing 2",
+      "icon": "vanilla-sundae",
+      "price": 139,
+      "promo": "new",
+      "description": "Testing 2...",
+      "id": "nq73p0B"
     }
   ]
 }
