@@ -23,8 +23,8 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [],
   imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule],
-  bootstrap: [AppComponent],
+  bootstrap: [],
 })
 export class AppModule {}

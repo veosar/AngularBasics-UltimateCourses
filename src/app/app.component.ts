@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   template: `
    <div class="app">  
     <header class="header">
