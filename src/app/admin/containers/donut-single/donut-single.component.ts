@@ -22,7 +22,7 @@ export class DonutSingleComponent implements OnInit {
 
   ngOnInit(): void {
     this.donutService
-    .readOne('8amkZ9')
+    .readOne('giw4sGK')
     .subscribe((donut: Donut) => this.donut = donut);
   }
 
@@ -37,6 +37,7 @@ export class DonutSingleComponent implements OnInit {
   }
 
   onDelete(donut: Donut) {
-    this.donutService.delete(donut);
+    this.donutService.delete(donut)
+    .subscribe(() => console.log('Deleted successfully!'));
   }
 }
