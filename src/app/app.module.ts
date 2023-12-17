@@ -11,8 +11,14 @@ import { DonutSingleComponent } from './admin/containers/donut-single/donut-sing
 export const routes: Routes = [
   { path: 'admin', children: [
     { path: 'donuts', component: DonutListComponent},
-    { path: 'donut', component: DonutSingleComponent}
+    { path: 'donut', component: DonutSingleComponent},
+    { path: '', pathMatch: 'full', redirectTo: 'donuts'}
   ]},  
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'admin'
+  }
 ];
 
 @NgModule({
