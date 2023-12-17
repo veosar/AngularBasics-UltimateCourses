@@ -21,6 +21,7 @@
       "name": "Caramel Swirl",
       "icon": "caramel-swirl",
       "price": 129,
+      "promo": "limited",
       "description": "Chocolate drizzled with caramel."
     },
     {
@@ -28,6 +29,7 @@
       "name": "Zesty Lemon",
       "icon": "zesty-lemon",
       "price": 129,
+      "promo": "new",
       "description": "Delicious lucious lemon."
     },
     {
