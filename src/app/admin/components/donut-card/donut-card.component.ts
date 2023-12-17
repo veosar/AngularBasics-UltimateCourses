@@ -5,7 +5,8 @@ import { Donut } from '../../models/donut.model';
   selector: 'donut-card',
   encapsulation: ViewEncapsulation.Emulated,
   template: `
-  <div class="donut-card" 
+  <a class="donut-card" 
+  [routerLink] = "donut.id"
   [ngClass]="{
     'donut-card-promo': donut.promo
   }">
@@ -27,7 +28,7 @@ import { Donut } from '../../models/donut.model';
       {{ donut.price / 100 | currency: 'USD': 'symbol' }}
 </p>
 </div>
-</div>
+</a>
   `,
   styles: [
     `
